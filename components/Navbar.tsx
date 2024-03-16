@@ -1,13 +1,13 @@
 import React from "react";
 import SearchMenu from "./SearchMenu";
 
-type Props = {};
-
-const Navbar = (props: Props) => {
+interface NavbarProps {
+  searchParams: { tab?: string; title?: string };
+}
+const Navbar = ({ searchParams }: NavbarProps) => {
   return (
-    <div className="bg-green-500 p-3">
-      {/* <SearchMenu /> */}
-      searchmenu here
+    <div>
+      <SearchMenu searchParams={searchParams} />
     </div>
   );
 };
